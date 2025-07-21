@@ -25,23 +25,34 @@ const MentorDashboardSidebar = () => {
                 />
             </div>
             <nav className="mentorsidebar-nav">
-                <Link href="/dashboard" className={isActive('/dashboard') ? 'mentornav-item active' : 'mentornav-item'}>
-                    <FaHome /> Dashboard
+                
+            <Link href="/mentor-dashboard" className={isActive('/mentor-dashboard') ? 'mentornav-item active' : 'mentornav-item'}>
+                    <FaBook /> Dashboard
                 </Link>
+               
                 <Link href="/mentor-dashboard/mentorCourses" className={isActive('/mentor-dashboard/mentorCourses') ? 'mentornav-item active' : 'mentornav-item'}>
                     <FaBook /> My Courses
                 </Link>
-                <Link href="/mentor-dashboard/students" className={isActive('/mentor-dashboard/students') ? 'mentornav-item active' : 'mentornav-item'}>
-                    <FaUserFriends /> Students
+                <Link href="/mentor-dashboard/editContent" className={isActive('/mentor-dashboard/editContent') ? 'mentornav-item active' : 'mentornav-item'}>
+                    <FaHome /> Edit Content
                 </Link>
+                {/* <Link href="/mentor-dashboard/students" className={isActive('/mentor-dashboard/students') ? 'mentornav-item active' : 'mentornav-item'}>
+                    <FaUserFriends /> Students
+                </Link> */}
                 <Link href="/mentor-dashboard/assignments" className={isActive('/mentor-dashboard/assignments') ? 'mentornav-item active' : 'mentornav-item'}>
-                    <FaUserFriends /> Assignments
+                    <FaUserFriends /> Manage Quizzes
+                </Link>
+                <Link href="/mentor-dashboard/availability" className={isActive('/mentor-dashboard/availability') ? 'mentornav-item active' : 'mentornav-item'}>
+                    <FaHome /> My Availability
+                </Link>
+                <Link href="/mentor-dashboard/students" className={isActive('/mentor-dashboard/bookings') ? 'mentornav-item active' : 'mentornav-item'}>
+                    <FaHome /> Booking
                 </Link>
                 <Link href="/mentor-dashboard/notifications" className={isActive('/mentor-dashboard/notifications') ? 'mentornav-item active' : 'mentornav-item'}>
                     <FaCog /> Notifications
                 </Link>
                 <Link href="/mentor-dashboard/settings" className={isActive('/mentor-dashboard/settings') ? 'mentornav-item active' : 'mentornav-item'}>
-                    <FaCog /> Settings
+                    <FaCog /> Profile Settings
                 </Link>
                 <Link href="/" className="mentornav-item logout-button">
                     <FaSignOutAlt /> Logout

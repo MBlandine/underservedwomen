@@ -58,10 +58,10 @@ export default function MentorCoursesPage() {
     <div className="courses-container">
       <div className="courses-header">
         <h2>My Courses</h2>
-        <button onClick={() => setShowCourseForm(true)} className="add-course-button">
+        {/* <button onClick={() => setShowCourseForm(true)} className="add-course-button">
           <Plus className="icon-sm" />
           Add New Course
-        </button>
+        </button> */}
       </div>
 
       <div className="courses-table-wrapper">
@@ -94,7 +94,7 @@ export default function MentorCoursesPage() {
                   <div className="action-buttons">
                     <button title="View"><Eye className="icon-sm" /></button>
                     <button title="Edit"><Edit className="icon-sm" /></button>
-                    <button title="Delete" className="delete"><Trash2 className="icon-sm" /></button>
+                    {/* <button title="Delete" className="delete"><Trash2 className="icon-sm" /></button> */}
                   </div>
                 </td>
               </tr>

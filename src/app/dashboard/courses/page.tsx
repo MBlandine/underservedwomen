@@ -47,9 +47,9 @@ export default function CoursesPage() {
   const fetchAdminCourses = async () => {
     try {
          await new Promise((res) => setTimeout(res, 500));
-         setCourses(dummyCourses);
-      // const response = await api.get('/api/courses/admin-list');
-      // setCourses(response.data);
+        //  setCourses(dummyCourses);
+      const response = await api.get('/api/courses/admin-list');
+      setCourses(response.data);
     } catch (error) {
       console.error("Failed to fetch courses for admin:", error);
       toast.error("Could not load course data. Please try again.");
@@ -136,17 +136,17 @@ export default function CoursesPage() {
             {courses.map((course) => (
               <tr key={course.id}>
                 <td>
-                  {/* <img
+                  <img
                     src={course.image ? `${process.env.NEXT_PUBLIC_API_URL}${course.image}` : "/placeholder-image.png"}
                     alt={course.title}
                     className="course-img"
-                  /> */}
+                  />
                   
-                 <img
+                 {/* <img
                  src={course.image || "/placeholder-image.png"}
                  alt={course.title}
                  className="course-img"
-                 />
+                 /> */}
                  
 
             
@@ -166,14 +166,14 @@ export default function CoursesPage() {
                   <FiAward className="table-icon" /> {course.level || 'N/A'}
                 </td>
                 <td className="actions-cell">
-                  {/* <Link href={`/dashboard/courses/${course.id}`}>
+                  <Link href={`/dashboard/courses/${course.id}`}>
                     <button className="view-btn">
                        View Details
                     </button>
-                  </Link> */}
-                  <Link href="/dashboard/courses/details">
-                  <button className='view-btn'>View Details</button>
                   </Link>
+                  {/* <Link href="/dashboard/courses/details">
+                  <button className='view-btn'>View Details</button>
+                  </Link> */}
                   <button 
                     className="delete-btn" 
                     title="Delete Course"
